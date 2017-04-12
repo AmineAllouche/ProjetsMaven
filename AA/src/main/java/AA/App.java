@@ -8,6 +8,11 @@ import java.io.*;
 
 import com.opencsv.CSVReader;
 
+import org.apache.commons.collections.*;
+
+
+
+
 
 public class App 
 {
@@ -39,7 +44,34 @@ public class App
 		            }
 			System.out.println("Lecture du nombre : " + nb);
 			System.out.println("Le nombre maximum est : " + monmax);
-		            }
+			
+			Iterator<String[]> IT = myEntries.iterator();
+	        IT.next();
+			
+	        while(IT.hasNext())
+	        {
+	        	String[] chiffres = IT.next();
+	        	List<String> list  = Arrays.asList(chiffres);
+	        	Vector<String> out = new Vector<String>();
+	           	Predicate predicat = new Predicate()
+	           	{
+	           	    public boolean evaluate(Object object)
+	           	    {
+	           	    	try
+	           	    	{
+	           	    		return Integer.parseInt((String) object) > 50;
+	           	    	}
+	           	    	catch (java.lang.NumberFormatException e)
+	           	    	{
+	           	    		return false;
+	           	    	}
+	           	    }
+	           	};
+	           	CollectionUtils.select(list, predicat, out);
+	            System.out.println("OUT : " + out);
+	        }
+	    }
+		            
 
 		        
 
@@ -52,6 +84,7 @@ public class App
 		} 
        
 	//parcourt
+		
      
     }
 
