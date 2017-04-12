@@ -6,7 +6,7 @@ import java.util.*;
 
 import java.io.*;
 
-import com.opencsv.CSVReader;
+import com.opencsv.*;
 
 import org.apache.commons.collections.*;
 
@@ -32,8 +32,10 @@ public class App
     	int nb = 0;
         int monmax = 0;
         CSVReader reader;
+        CSVWriter writer;
 		try {
 			reader = new CSVReader(new FileReader("data.csv"));
+			writer = new CSVWriter (new FileWriter ("data-filtered.csv"));
 			List<String[]> myEntries = reader.readAll();
 			
 			
@@ -69,10 +71,12 @@ public class App
 	           	};
 	           	CollectionUtils.select(list, predicat, out);
 	            System.out.println("OUT : " + out);
+	            writer.writeNext(out.toArray(new String[0]));
+	            
 	        }
 	    }
 		            
-
+			   writer.close();
 		        
 
 		} catch (FileNotFoundException e) {
