@@ -1,5 +1,6 @@
 package AA;
 
+<<<<<<< HEAD
 
 public class App 
 {
@@ -21,3 +22,16 @@ public class App
 }
 
 
+=======
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+    }
+}
+>>>>>>> f8c0cda46c632a174a13e8ed1842cffc853e2aad

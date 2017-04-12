@@ -7,6 +7,7 @@ import junit.framework.TestSuite;
 /**
  * Unit test for simple App.
  */
+<<<<<<< HEAD
 
 public class AppTest 
     extends TestCase
@@ -15,6 +16,11 @@ public class AppTest
     {
     	return a>b ? a:b;
     }
+=======
+public class AppTest 
+    extends TestCase
+{
+>>>>>>> f8c0cda46c632a174a13e8ed1842cffc853e2aad
     /**
      * Create the test case
      *
@@ -25,7 +31,11 @@ public class AppTest
         super( testName );
     }
 
+<<<<<<< HEAD
     /**	
+=======
+    /**
+>>>>>>> f8c0cda46c632a174a13e8ed1842cffc853e2aad
      * @return the suite of tests being tested
      */
     public static Test suite()
@@ -36,6 +46,7 @@ public class AppTest
     /**
      * Rigourous Test :-)
      */
+<<<<<<< HEAD
     public void testmax()
     {   	
     	assertEquals(max(4,5),5);
@@ -45,9 +56,14 @@ public class AppTest
     	assertEquals(max(5,4),5);
     }
 
+=======
+>>>>>>> f8c0cda46c632a174a13e8ed1842cffc853e2aad
     public void testApp()
     {
         assertTrue( true );
     }
+<<<<<<< HEAD
     
+=======
+>>>>>>> f8c0cda46c632a174a13e8ed1842cffc853e2aad
 }
